@@ -85,6 +85,41 @@ public class BankRecords {
 		this.car=car;
 	}
 	
+	//Savings account getters and setters
+	public String getSave_act() {
+		return this.save_act;
+	}
+	
+	public void setSave_act(String save_act) {
+		this.save_act=save_act;
+	}
+	
+	//Current Account getters and setters
+	public String getCurrent_act() {
+		return this.current_act;
+	}
+	
+	public void setCurrent_act(String current_act) {
+		this.current_act= current_act;
+	}
 	
 	
+	//Mortgage getters and setters
+	public String getMortgage() {
+		return this.mortgage;
+	}
+	
+	public void setMortgage(String mortgage) {
+		this.mortgage= mortgage;
+	}
+	
+	
+	//pep getters and setters
+	public String getPep() {
+		return this.pep;
+	}
+	
+	public void setPep(String pep) {
+		this.pep=pep;
+	}
 }
