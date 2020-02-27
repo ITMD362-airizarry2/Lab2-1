@@ -122,4 +122,14 @@ public class BankRecords {
 	public void setPep(String pep) {
 		this.pep=pep;
 	}
+	
+	//Sex getters and setters
+	public String getSex() {
+		return this.sex;
+	}
+	
+	public void setSex(String sex) {
+		this.sex=sex;
+	}
+	
 }
