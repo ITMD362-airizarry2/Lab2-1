@@ -7,16 +7,16 @@ public class BankRecords {
 
 	private String id;
 	private int age;
-	//Enter Sex instance field here
+	private String sex;
 	private String region;
 	private double income;
-	private boolean married;
+	private String married;
 	private int children;
-	private boolean car;
-	private boolean save_act;
-	private boolean current_act;
-	private boolean mortgage;
-	private boolean pep;
+	private String car;
+	private String save_act;
+	private String current_act;
+	private String mortgage;
+	private String pep;
 	
 	//Getters and Setters
 	
@@ -49,7 +49,7 @@ public class BankRecords {
 	
 	
 	//income getter and setter
-	public double setIncome() {
+	public double getIncome() {
 		return this.income;
 	}
 	
@@ -57,8 +57,33 @@ public class BankRecords {
 		this.income= income;
 	}
 	
+	//Married getter and setter
+	public String getMarried() {
+		return this.married;
+	}
 	
+	public void setMarried(String married) {
+		this.married= married;
+		
+	}
 	
+	//Children getter and setter
+	public int getChildren() {
+		return this.children;
+	}
+	
+	public void setChildren(int children) {
+		this.children=children;
+	}
+	
+	//Car getter and setter
+	public String getCar() {
+		return this.car;
+	}
+	
+	public void setCar(String car) {
+		this.car=car;
+	}
 	
 	
 	
