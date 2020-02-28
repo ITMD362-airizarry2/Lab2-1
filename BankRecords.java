@@ -1,7 +1,9 @@
 package lab2;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -150,6 +152,7 @@ public class BankRecords {
 	
 		BufferedReader br; 
 		
+		try {
 		br = new BufferedReader(new FileReader (new File("bank-Detail.csv")));
 		
 		String line;
@@ -157,11 +160,32 @@ public class BankRecords {
 		while ((line= br.readLine()) != null) {
 			array.add(Arrays.asList(line.split(",")));
 		}
-		
+		} catch (FileNotFoundException e)
+		{
+			System.out.println("File Not Found");
+		}
+		catch (IOException e) {
+			System.out.println("IO Exception");
+		}
 	}
 	
 	public  void processData(){
 		
+		int idx=0;
+		
+		for (List<String>rowData:array) {
+			robjs[idx] = new BankRecords();
+			
+			//Calling setters and populating them 
+			robjs[idx].setId(rowData.get(0));
+			robjs[idx].setAge(Integer.parseInt(rowData.get(1)));
+			robjs[idx].setSex(rowData.get(0));
+			robjs[idx].setRegion(rowData.get(0));
+			robjs[idx].setIncome(Double.parseDouble(rowData.get(0)));
+			
+		}
+		
+		printData();
 		
 	}
 	
