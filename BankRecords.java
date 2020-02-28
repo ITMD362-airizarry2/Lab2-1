@@ -1,10 +1,24 @@
 package lab2;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 //Author: Anthony Irizarry
 //Date: 2/27/2020
 
 public class BankRecords {
 
+	//array of Bankrecords objects
+	static BankRecords robjs[] = new BankRecords[600];
+	
+	//arraylist to hold spreadsheet rows and columns
+	static ArrayList<List<String>> array= new ArrayList<>();	
+	
+	
+	//Instance Variables
 	private String id;
 	private int age;
 	private String sex;
@@ -131,5 +145,29 @@ public class BankRecords {
 	public void setSex(String sex) {
 		this.sex=sex;
 	}
+	
+	public void readData() {
+	
+		BufferedReader br; 
+		
+		br = new BufferedReader(new FileReader (new File("bank-Detail.csv")));
+		
+		String line;
+		
+		while ((line= br.readLine()) != null) {
+			array.add(Arrays.asList(line.split(",")));
+		}
+		
+	}
+	
+	public  void processData(){
+		
+		
+	}
+	
+	public void  printData() {
+		
+	}
+	
 	
 }
