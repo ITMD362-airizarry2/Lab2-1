@@ -167,6 +167,7 @@ public class BankRecords {
 		catch (IOException e) {
 			System.out.println("IO Exception");
 		}
+		processData();
 	}
 	
 	public  void processData(){
@@ -179,10 +180,18 @@ public class BankRecords {
 			//Calling setters and populating them 
 			robjs[idx].setId(rowData.get(0));
 			robjs[idx].setAge(Integer.parseInt(rowData.get(1)));
-			robjs[idx].setSex(rowData.get(0));
-			robjs[idx].setRegion(rowData.get(0));
-			robjs[idx].setIncome(Double.parseDouble(rowData.get(0)));
+			robjs[idx].setSex(rowData.get(2));
+			robjs[idx].setRegion(rowData.get(3));
+			robjs[idx].setIncome(Double.parseDouble(rowData.get(4)));
+			robjs[idx].setMarried(rowData.get(5));
+			robjs[idx].setChildren(Integer.parseInt(rowData.get(6)));
+			robjs[idx].setCar(rowData.get(7));
+			robjs[idx].setSave_act(rowData.get(8));
+			robjs[idx].setCurrent_act(rowData.get(9));
+			robjs[idx].setMortgage(rowData.get(10));
+			robjs[idx].setPep(rowData.get(11));
 			
+			idx++;
 		}
 		
 		printData();
@@ -190,6 +199,13 @@ public class BankRecords {
 	}
 	
 	public void  printData() {
+		
+		System.out.println("id\t \tage\t \tsex \tregion\t \tincome\t \tmarried\t \tchildren\t \tcar\t \tsave_act\t \tcurrent_act\t \tmortgage\t \tpep\t ");
+		
+		for (int i= 0; i<25; i++) {
+			System.out.print(robjs[i].getid()+ "\t\t" + robjs[i].getAge()+ "\t\t" + robjs[i].getSex()+ "\t\t");
+		}
+		
 		
 	}
 	
