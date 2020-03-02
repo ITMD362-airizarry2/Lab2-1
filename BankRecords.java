@@ -200,7 +200,7 @@ public class BankRecords {
 	
 	public void  printData() {
 		
-		System.out.println("id\t \tage\t \tsex \tregion\t \tincome\t \tmarried\t \tchildren\t \tcar\t \tsave_act\t \tcurrent_act\t \tmortgage\t \tpep\t ");
+		System.out.println("id\t \tage\t \tsex \tregion\t \tincome\t \tmortgage\t");
 		
 		
 		
@@ -214,7 +214,7 @@ public class BankRecords {
 				System.out.print(robjs[i].getRegion()+ "\t");
 			}
 			
-		System.out.print(robjs[i].getIncome()+ "\t\t" + robjs[i].getMarried()+"\t\t"+ robjs[i].getChildren()+"\t\t" + robjs[i].getCar()+ "\t\t"+ robjs[i].getSave_act() + "\t\t" + robjs[i].getCurrent_act()+ "\t\t"+ robjs[i].getMortgage() + "\t\t"+ robjs[i].getPep()+ "\n") ;
+		System.out.print(robjs[i].getIncome()+ "\t\t" +  robjs[i].getMortgage() + "\n") ;
 			
 		}
 		
