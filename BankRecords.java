@@ -202,9 +202,23 @@ public class BankRecords {
 		
 		System.out.println("id\t \tage\t \tsex \tregion\t \tincome\t \tmarried\t \tchildren\t \tcar\t \tsave_act\t \tcurrent_act\t \tmortgage\t \tpep\t ");
 		
+		
+		
 		for (int i= 0; i<25; i++) {
-			System.out.print(robjs[i].getid()+ "\t\t" + robjs[i].getAge()+ "\t\t" + robjs[i].getSex()+ "\t" +  robjs[i].getRegion()+ "\t"+ robjs[i].getIncome()+ "\t\t" + robjs[i].getMarried()+ "\t\t"+ robjs[i].getChildren()+ "\t\t\t"+ robjs[i].getCar()+ "\t\t"+ robjs[i].getSave_act()+ "\t\t\t\t"+ robjs[i].getCurrent_act()+ "\t\t"+ robjs[i].getMortgage()+ "\t\t\t"+ robjs[i].getPep()+ "\t\t");
+			System.out.print(robjs[i].getid()+ "\t\t" + robjs[i].getAge()+ "\t\t" + robjs[i].getSex()+ "\t");  
+		
+			if (robjs[i].getRegion().contentEquals("RURAL") |  robjs[i].getRegion().contentEquals("TOWN")) {
+				System.out.print(robjs[i].getRegion()+ "\t\t");
+			}
+			else {
+				System.out.print(robjs[i].getRegion()+ "\t");
+			}
+			
+		System.out.print(robjs[i].getIncome()+ "\t\t" + robjs[i].getMarried()+"\t\t"+ robjs[i].getChildren()+"\t\t" + robjs[i].getCar()+ "\t\t"+ robjs[i].getSave_act() + "\t\t" + robjs[i].getCurrent_act()+ "\t\t"+ robjs[i].getMortgage() + "\t\t"+ robjs[i].getPep()+ "\n") ;
+			
 		}
+		
+		
 		
 		
 	}
